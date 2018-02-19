@@ -1,0 +1,19 @@
+y=y0 + (A/(w*sqrt(PI/2)))*exp(-2*((x-xc)/w)^2)
+
+		Value	Standard Error
+B	y0	-0,20614	0,08973
+B	xc	1,13578	0,00276
+B	w	0,57046	0,01454
+B	A	2,97147	0,1263
+B	sigma	0,28523	
+B	FWHM	0,67167	
+B	Height	4,15607	
+
+Ajuste Parte Exponencial 
+
+y = y0 + A*exp(R0*x)
+
+		Value	Standard Error
+B	y0	-15,32175	1,99157
+B	A	11,95367	1,53813
+B	R0	0,42069	0,02843

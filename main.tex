@@ -20,7 +20,8 @@
 %----------------------------------------------------------------------------------------
 
 
-\documentclass[10pt, a4paper, twocolumn]{article} % 10pt font size (11 and 12 also possible), A4 paper (letterpaper for US letter) and two column layout (remove for one column)
+%\documentclass[10pt, a4paper, twocolumn]{article}
+\documentclass[10pt, a4paper]{article}% 10pt font size (11 and 12 also possible), A4 paper (letterpaper for US letter) and two column layout (remove for one column)
 
 \input{structure.tex} % Specifies the document structure and loads requires packages
 \input{setup_paquetes_lucia.tex} %incluye los paquetes usados mas comunes 
@@ -52,8 +53,13 @@
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
-\lettrineabstract{ En este experimento se busca estudiar el comportamiento de la cavidad resonante de un láser de Nd:YAG. Se procede primero a determinar las condiciones de alineación bajo las cuales un espejo dieléctrico de 98\% permite la aparición de modos resonantes en una cavidad lineal , así como también se estudian las características de la potencia óptica emitida por el láser de Nd:YAG tanto en cavidades lineales como en cavidades en V. Finalmente, se analizan los distribución espacial de los diferentes modos transversales electromagnéticos emitidos por el laser  }
 
+\begin{abstract}
+%\lettrineabstract{ 
+En este experimento se busca estudiar el comportamiento de la cavidad resonante de un láser de Nd:YAG. Se procede primero a determinar las condiciones de alineación bajo las cuales un espejo dieléctrico de 98\% permite la aparición de modos resonantes en una cavidad lineal , así como también se estudian las características de la potencia óptica emitida por el láser de Nd:YAG tanto en cavidades lineales como en cavidades en V. Finalmente, se analizan los distribución espacial de los diferentes modos transversales electromagnéticos emitidos por el laser  
+%}
+\end{abstract}
+\begin{multicols}{2} % Two-column layout throughout the main article text
 %----------------------------------------------------------------------------------------
 %	ARTICLE CONTENTS
 %----------------------------------------------------------------------------------------
@@ -62,14 +68,33 @@
 \section{Introducción}
 % \addcontentsline{toc}{section}{Introduccion} % Adds this section to the table of contents
 
+\subsection{Estructura y composicion de un laser}
+
+El láser es un dispositivo que permite la amplificación de radiación electromagnética mediante un proceso físico conocido como emisión estimulada o inducida. Este proceso permite la amplificación de señales lumínicas generadas por otros medios. El mecanismo que genera dichas señales lumínicas se denominada mecanismo de bombeo, y los procesos para generarlo son diversos y pueden ir desde descargas eléctricas en medios gaseoso hasta la excitación fluorescente de medios orgánicos como colorantes utilizando otro láser. Esto es necesario para excitar las transiciones electrónicas en el medio en el que se produce la emisión estimulada, denominado medio activo,debido a que se debe entregar energía al medio activo de manera constante para que pueda mantenerse la emisión estimulada. Por ultimo, se necesita de un mecanismo de realimentación a fin de inducir las transiciones electrónicas que producen la amplificación de la radiación electromagnética. El mecanismo de retroalimentación se logra mediante una cavidad resonante que usualmente consiste en dos o mas espejos de alta reflectividad alineados de tal manera de se favorezca la la reinyeccion de la luz emitida en el sentido del eje de la cavidad por el medio activo excitado al mismo medio. Los espejos entonces actuan como un multiplicador de la longitud de onda del material. Otro aspecto importante por el cual es crucial la correcta alineación de los espejos en la cavidad es que el resonador debe sustentar ondas estacionarias de luz, es decir, debe mantener la configuración estable del campo de radiación.
+
+
+
+% \begin{itemize}
+% 	\item First item in a list 
+% 	\item Second item in a list 
+% 	\item Third item in a list
+% \end{itemize}
+
+%  rhoncus eget. Pellentesque et semper lectus.
+
+% \begin{description}
+% 	\item[First] This is the first item
+% 	\item[Last] This is the last item
+% \end{description}
+
+\subsection{Condiciones de estabilidad de una cavidad laser }
+
+Nam ante risus, tempor nec lacus ac, congue pretium dui. Donec a nisl est. Integer accumsan mauris eu ex venenatis mollis. Aliquam sit amet ipsum laoreet, mollis sem sit amet, pellentesque quam. Aenean auctor diam eget erat venenatis laoreet. In ipsum felis, tristique eu efficitur at, maximus ac urna. Aenean pulvinar eu lorem eget suscipit. Aliquam et lorem erat. Nam fringilla ante risus, eget convallis nunc pellentesque non. Donec ipsum nisl, consectetur in magna eu, hendrerit pulvinar orci. Mauris porta convallis neque, non viverra urna pulvinar ac. Cras non condimentum lectus. Aliquam odio leo, aliquet vitae tellus nec, imperdiet lacinia turpis. Nam ac lectus imperdiet, luctus nibh a, feugiat urna.
+
 \section{Desarrollo Experimental}
 % \addcontentsline{toc}{section}{Desarrollo Experimental} % Adds this section to the table of contents
 
-%This sentence requires citation \citep{Reference1}. This sentence requires multiple citations to imply that it is better supported \citep{Reference2,Reference3}. Finally, when conducting an appeal to authority, it can be useful to cite a reference in-text, much like \cite{Reference1} do quite a bit. Oh, and make sure to check out the bear in Figure \ref{bear}.
-
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce maximus nisi ligula. Morbi laoreet ex ligula, vitae lobortis purus mattis vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec ac metus ut turpis mollis placerat et nec enim. Duis tristique nibh maximus faucibus facilisis. Praesent in consequat leo. Maecenas condimentum ex rhoncus, elementum diam vel, malesuada ante. Fusce pulvinar, mauris pretium placerat venenatis, lectus ex tempus lacus, id suscipit libero lorem eu augue. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-
-%Aliquam elementum nulla at arcu finibus aliquet. Praesent congue ultrices nisl pretium posuere. Nunc vel nulla hendrerit, ultrices justo ut, ultrices sapien. Duis ut arcu at nunc pellentesque consectetur. Vestibulum eget nisl porta, ultricies orci eget, efficitur tellus. Maecenas rhoncus purus vel mauris tincidunt, et euismod nibh viverra. Mauris ultrices tellus quis ante lobortis gravida. Duis vulputate viverra erat, eu sollicitudin dui. Proin a iaculis massa. Nam at turpis in sem malesuada rhoncus. Aenean tempor risus dui, et ultrices nulla rutrum ut. Nam commodo fermentum purus, eget mattis odio fringilla at. Etiam congue et ipsum sed feugiat. Morbi euismod ut purus et tempus. Etiam est ligula, aliquam eget porttitor ut, auctor in risus. Curabitur at urna id dui lobortis pellentesque.
+ lobortis pellentesque.
 
 
 \begin{align}
@@ -82,30 +107,9 @@
 
 
 
-% Donec nec nibh sagittis, finibus mauris quis, laoreet augue. Maecenas aliquam sem nunc, vel semper urna hendrerit nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas pellentesque dolor lacus, sit amet pretium felis vestibulum finibus. Duis tincidunt sapien faucibus nisi vehicula tincidunt. Donec euismod suscipit ligula a tempor. Aenean a nulla sit amet magna ullamcorper condimentum. Fusce eu velit vitae libero varius condimentum at sed dui.
-
-% In non leo tincidunt, tristique orci eu, suscipit ex. Fusce non lectus ut dolor tincidunt fermentum. Donec dictum mauris magna, ut dictum nisl finibus quis. Nulla elementum ipsum ut lectus sodales finibus. Nulla ac malesuada magna. Etiam arcu dolor, luctus eget elit a, volutpat vulputate mi. Donec elementum tellus libero, ut ornare orci dignissim lacinia. Nullam iaculis vehicula sem, at tempor tellus. Praesent eu nisi a elit viverra lobortis. Nullam eu metus et justo molestie posuere vitae imperdiet erat. Praesent at gravida dui. Vivamus mauris odio, efficitur eget lacus quis, mattis tristique risus. Mauris quis metus sed risus lobortis sollicitudin vitae vitae quam. Morbi leo turpis, aliquam at nunc sit amet, ultricies dictum lorem. Nam et fringilla elit. Vestibulum auctor, turpis ut facilisis tempor, arcu nibh tincidunt libero, quis blandit leo turpis a urna.
 
 %------------------------------------------------
 
-\subsection{Subsection}
-
-Nam ante risus, tempor nec lacus ac, congue pretium dui. Donec a nisl est. Integer accumsan mauris eu ex venenatis mollis. Aliquam sit amet ipsum laoreet, mollis sem sit amet, pellentesque quam. Aenean auctor diam eget erat venenatis laoreet. In ipsum felis, tristique eu efficitur at, maximus ac urna. Aenean pulvinar eu lorem eget suscipit. Aliquam et lorem erat. Nam fringilla ante risus, eget convallis nunc pellentesque non. Donec ipsum nisl, consectetur in magna eu, hendrerit pulvinar orci. Mauris porta convallis neque, non viverra urna pulvinar ac. Cras non condimentum lectus. Aliquam odio leo, aliquet vitae tellus nec, imperdiet lacinia turpis. Nam ac lectus imperdiet, luctus nibh a, feugiat urna.
-
-\begin{itemize}
-	\item First item in a list 
-	\item Second item in a list 
-	\item Third item in a list
-\end{itemize}
-
-% Nunc egestas quis leo sed efficitur. Donec placerat, dui vel bibendum bibendum, tortor ligula auctor elit, aliquet pulvinar leo ante nec tellus. Praesent at vulputate libero, sit amet elementum magna. Pellentesque sodales odio eu ex interdum molestie. Suspendisse lacinia, augue quis interdum posuere, dolor ipsum euismod turpis, sed viverra nibh velit eget dolor. Curabitur consectetur tempus lacus, sit amet luctus mauris interdum vel. Curabitur vehicula convallis felis, eget mattis justo rhoncus eget. Pellentesque et semper lectus.
-
-\begin{description}
-	\item[First] This is the first item
-	\item[Last] This is the last item
-\end{description}
-
-% Donec nec nibh sagittis, finibus mauris quis, laoreet augue. Maecenas aliquam sem nunc, vel semper urna hendrerit nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas pellentesque dolor lacus, sit amet pretium felis vestibulum finibus. Duis tincidunt sapien faucibus nisi vehicula tincidunt. Donec euismod suscipit ligula a tempor. Aenean a nulla sit amet magna ullamcorper condimentum. Fusce eu velit vitae libero varius condimentum at sed dui.
 
 %------------------------------------------------
 
@@ -177,5 +181,5 @@ Quisque lacinia, purus id mattis gravida, sem enim fringilla erat, non dapibus e
 \printbibliography[title={Bibliography}] % Print the bibliography, section title in curly brackets
 
 %----------------------------------------------------------------------------------------
-
+\end{multicols}
 \end{document}
