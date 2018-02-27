@@ -125,6 +125,23 @@ Para tomar una fotografía del modo TEM$_{00}$ se colocó una hoja de papel cuad
 Por último, se generó segunda armónica. Para ello, se colocó, en el brazo b y cerca del espejo de salida, un cristal KTP (potassium titanyl phosphate). Luego, detrás del espejo de salida se ubicó un prisma para separar los haces verde e infrarrojo y se midió la variación de potencia de salida de cada haz en función de la corriente de bombeo, tal como se había hecho con el haz saliente de la cavidad plano--paralela.   
 
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Graficos/cavplana.png}
+    \caption{Arreglo de la cavidad plano--paralela junto con el sistema de alineación compuesto por el láser de He--Ne y los espejos de Ag.}
+    \label{cavplana}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Graficos/cavV1.png}
+    \caption{Arreglo de la cavidad en V. Detrás del espejo de salida se colocó un espejo de Ag para redireccionar el haz hacia una pantalla ubicada a, aproximadamente, 4m.}
+    \label{cavV1}
+\end{figure}
+
 %------------------------------------------------
 
 \section{Resultados y análisis}
@@ -132,9 +149,12 @@ Por último, se generó segunda armónica. Para ello, se colocó, en el brazo b 
 
 Los resultados obtenidos en relación a la potencia tanto del láser como de bombeo fueron los esperados (\textcolor{cyan}{Estoy suponiendo que vamos a rehacer los de bombeo y van a dar lo que esperamos. Sino cambio esta frase})({\textcolor{DarkBlue}{Si volvemos a hacer la medicion y no da, me uno a la compania del anillo y me voy con Frodo hasta la Montala del Destino a arrojar el anillo unico}}). En la Fig. \ref{laservscorr} se ve que la potencia óptica del láser es insignificante hasta que la corriente de bombeo alcanza 1.9A. A partir de ese umbral, la potencia aumenta de forma lineal  (R$^2$ = 0,99192, $\chi^2$ = 0,02477), con pendiente $ (11,89 \pm 0,38)$mW/A, lo cual implica una ganancia de [\textcolor{cyan}{algo, si es que vale esta afirmación}]. \textcolor{cyan}{Resultaría interesante estudiar, en alguna experiencia futura, hasta qué valor de corriente se mantiene esta relación lineal}. 
 
-La variación de la potencia óptica con la distancia (Fig. \ref{laservsdist}), a priori, parecen indicar que esta disminuye a medida que se aleja el sensor del láser. Sin embargo, teniendo en cuenta las características de estos dispositivos (\textcolor{cyan}{insertar características del láser}), se descarta esta suposición. Se cree que el porqué del comportamiento radica en la dirección del haz; es posible que este estuviera ligeramente desviado con respecto a la línea que une el láser con el sensor (\textcolor{DarkBlue}{El area activa del sensor tiene un diametro de 12 mm , a medida que te alejas aumenta el brazo de palanca por lo que una pequeña desviacion de la direcccion del haz puede tranquilamente salirse del area, ademas esta el angulo de la cabeza del detector respecto al eje del vastago }). Además, a pesar de haber utilizado un obturador, no se debe descartar que parte del haz del diodo de bombeo haya podido filtrarse y su potencia ser medida junto con la del láser. Esto podría explicar el comportamiento de los últimos tres puntos; de haber sido únicamente un problema de dirección del haz, los datos deberían haberse ubicado todos sobre una recta decreciente (como los primeros tres) hasta alcanzar una distancia en que la potencia fuera nula, pues el haz ya no estaría incidiendo sobre el sensor. 
+La variación de la potencia óptica con la distancia (Fig. \ref{laservsdist}), a priori, parecen indicar que esta disminuye a medida que se aleja el sensor del láser. Sin embargo, teniendo en cuenta que una de las características de estos dispositivos es su gran colimación, se descarta esta suposición. Se cree que el porqué del comportamiento radica en la dirección del haz; es posible que este estuviera ligeramente desviado con respecto a la línea que une el láser con el sensor (\textcolor{DarkBlue}{El area activa del sensor tiene un diametro de 12 mm , a medida que te alejas aumenta el brazo de palanca por lo que una pequeña desviacion de la direcccion del haz puede tranquilamente salirse del area, ademas esta el angulo de la cabeza del detector respecto al eje del vastago }). Además, a pesar de haber utilizado un obturador, no se debe descartar que parte del haz del diodo de bombeo haya podido filtrarse y su potencia ser medida junto con la del láser. Esto podría explicar el comportamiento de los últimos tres puntos; de haber sido únicamente un problema de dirección del haz, los datos deberían haberse ubicado todos sobre una recta decreciente (como los primeros tres) hasta alcanzar una distancia en que la potencia fuera nula, pues el haz ya no estaría incidiendo sobre el sensor. 
 
 (\textcolor{Green}{ Bueno mas o menos te cuento como es el analisis de los modos TEM y vos despues lo reelaboras para que coincida con el estilo del informe. \newline En primer lugar de las fotografias obtenidas se aislo la region de la foto correspondiente al modo y se corrigio la perspectiva. Esto hay que hacerlo porque sino introduce errores a la hora de analizar el perfil. Obteniendose imagenes de los modos en escala de grises de 16-bits de profundidad. En segun lugar se analizo estas imagenes en Python con el modulo scikit-video, la idea es que para cada direccion de la imagen ( o sea primero analizas la matriz como viene y despues repetis para la transpuesta), o sea basicamente primero obtenes la curva de la integral en esa direccion , haciendo una suma de todas las intensidades de todos los pixeles en una linea y despues haciendo una "suma acumulada" de todos estos valores la cual normalize a 1 . Finalmente obtenes el perfil de intensidades derivando esta curva. Por ultimo lo que hice fue pasar todos estos datos a Origin y hacer un ajuste no lineal de los perfiles. Despues en las conclusiones hay que aclarar que no es posible hacer un ajuste directo de los modos gaussianos, debido a los errores o "ruidos" introducidos por la diferencia de contraste entre los modos, el fondo debido al laser de bombeo, el tono del papel y porque estamos tomando fotos de la imagen proyectada sobre el papel y no directamente sobre el sensor de la camara CCD . Si es posible ajustar para modos bajos si se compensan esos errores en el ajuste, pero para modos mayores a 3 es imposible porque los picos estan demasiado cerca y el ruido te tapa cualquier estructura fina.})
+
+
+Una vez generada segunda armónica y separados los haces verde e infrarrojo, se midió la potencia de cada uno y los resultados son los que se muestran en las Fig. \ref{potverde} y \ref{potrojo}. 
 
 
 \textcolor{magenta}{Segunda armónica infrarrojo:
@@ -160,30 +180,30 @@ Segunda armónica en verde:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.3]{Graficos/potlaservscorr.png}
+    \includegraphics[scale=0.4]{Graficos/potvscor.png}
     \caption{Potencia óptica de láser en función de la corriente de bombeo. La potencia aumenta linealmente a partir de 1.9A.}
     \label{laservscorr}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.3]{Graficos/potlaservsdist.png}
+    \includegraphics[scale=0.4]{Graficos/potvsdist.png}
     \caption{Potencia óptica de láser en función de la distancia para una corriente de bombeo constante de 2.39A.}
     \label{laservsdist}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{Graficos/pot_verde.png}
+    \includegraphics[scale=0.4]{Graficos/pot_verde1.png}
     \caption{Potencia 2do armónico verde}
-    \label{laservsdist}
+    \label{potverde}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{Graficos/pot_infrarrojo.png}
     \caption{Potencia 2do armónico infrarrojo + ajuste lineal}
-    \label{laservsdist}
+    \label{potrojo}
 \end{figure}
 
 
